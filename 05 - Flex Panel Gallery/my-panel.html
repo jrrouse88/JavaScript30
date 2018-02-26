@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hero Panels </title>
+  <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+  <body>
+  <style>
+    /* set styles on html elements*/
+    html {
+      box-sizing: border-box;
+      font-family: 'Bungee', cursive;
+      text-shadow: #FC0 1px 0 10px;
+      font-size: 20px;
+    }
+    /* set margins to 0 */
+    body {
+      margin: 0;
+    }
+    /* universally set box-sizing */
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    .panels {
+      min-height: 100vh;  /* set minimum height to 100% of the viewports height */
+      overflow: hidden;
+      display: flex;
+    }
+
+    .panel {
+      background-size: cover;
+      background-position: center;
+      border: 1px solid red;
+      font-size: 20px;
+      flex: 1; /* disttribute space in flex container evenly */
+      text-align: center;
+      align-items: center; /* children are vertically centered and take up only as much space as needed */
+      justify-content: center; /* children are horizontally centered and take up only as much space as needed */
+      display: flex;
+      flex-direction: column; /*set children on top of each other instead of next to each other*/
+    }
+
+    .panel > * {
+      border: 1px solid blue;
+      margin: 0;
+      width: 100%;
+      flex: 1 0 auto; /* flex-grow | flex-shrink | flex-basis */
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .panel p {
+      font-size: 2em;
+    }
+
+    .panel > *:first-child { transform: translateY(-100%); }
+    .panel > *:last-child { transform: translateY(100%); }
+
+    .batman { background-image:url(https://fsmedia.imgix.net/63/de/b4/24/919d/4d7c/a898/3a96566016e9/batman.jpeg); }
+    .robin { background-image:url(https://pre00.deviantart.net/857f/th/pre/i/2012/209/a/1/robin_symbol_wp_by_chaomanceromega-d4zskz9.png); }
+    .nightwing { background-image:url(https://orig00.deviantart.net/2f0b/f/2013/188/0/f/nightwing_by_thallos-d6chblm.png); }
+    .batgirl { background-image:url(https://ewedit.files.wordpress.com/2017/11/batman.jpg?w=2000); }
+    .batwoman { background-image:url(http://www.dccomics.com/sites/default/files/GalleryComics_1920x1080_20170419_BW_Cv2_58d2ece61b9d81.16433697.jpg); }
+    .redhood { background-image:url(https://pre00.deviantart.net/3457/th/pre/f/2016/231/a/1/red_hood_by_mattiasfahlberg-daehfav.jpg); }
+  </style>
+  <div class='panels'>
+    <section class='panel batman'>
+      <p>Bruce</p>
+      <p>BATMAN</p>
+      <p>Wayne</p>
+    </section>
+    <section class='panel robin'>
+      <p>Damien</p>
+      <p>ROBIN</p>
+      <p>Wayne</p>
+    </section>
+    <section class='panel nightwing'>
+      <p>Dick</p>
+      <p>NIGHTWING</p>
+      <p>Grayson</p>
+    </section>
+    <section class='panel batgirl'>
+      <p>Barbara</p>
+      <p>BATGIRL</p>
+      <p>Gordon</p>
+    </section>
+    <section class='panel redhood'>
+      <p>Jason</p>
+      <p>RED HOOD</p>
+      <p>Todd</p>
+    </section>
+    <section class='panel batwoman'>
+      <p>Kate</p>
+      <p>BATWOMAN</p>
+      <p>Kane</p>
+    </section>
+  </div>
+  <script>
+
+  </script>
+</body>
+</html>
